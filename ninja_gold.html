@@ -1,0 +1,86 @@
+<html>
+    <head>
+        
+            <style>
+                * {
+                    margin:0;
+                    padding:0
+                }
+                .header{
+                    margin: 20px;
+                }
+
+                .gold {
+                    display:inline-block;
+                    border: black solid 2px;
+                    margin: 20px;
+                    padding: 10px;
+                    width: 180px;
+                    text-align: center;
+                }
+
+                .goldamt {
+                    border: black solid 1px;
+                    width: 90px;
+                }
+                .header h3 {
+                    display: inline-block;
+                }
+
+                .activities {
+                    margin: 20px;
+                }
+
+                .goldamt {
+                    text-align: right;
+                }
+
+                .gold a{
+                    width: 60px;
+                    margin-top:35px;
+                }
+
+                .activities textarea{
+                    border: black solid 1px;
+                    width: 950px;
+                    height: 100px;
+                }
+            </style>
+    </head>
+    <body>
+        <div class="header">
+                <h3>Your Gold:</h3>
+                <h3 class="goldamt">{{session['urgold']}}</h3>
+        </div>
+        <div class="options">
+            <div class="gold">
+                <h2>Farm</h2>
+                <h4>(earns 10-20 golds)</h4>
+                <a href="/process_money/farm"><input type="button" value="Farm"></a>
+            </div>
+            <div class="gold">
+                <h2>Cave</h2>
+                <h4>(earns 5-10 golds)</h4>
+                <a href="/process_money/cave"><input type="button" value="Cave"></a>
+            </div>
+            <div class="gold">
+                <h2>House</h2>
+                <h4>(earns 2-5 golds)</h4>
+                <a href="/process_money/house"><input type="button" value="House"></a>
+            </div>
+            <div class="gold">
+                <h2>Casino</h2>
+                <h4>(earns/takes 0-50 golds)</h4>
+                <a href="/process_money/casino"><input type="button" value="Casino"></a>
+                </a>
+            </div>
+        </div>
+        <div class="activities">
+            <p>Activities</p>
+            <textarea>
+                {{session['uractivity']}}
+            </textarea>
+        </form>
+        </div>
+    </body>
+</html>
